@@ -1,0 +1,15 @@
+extends layout
+
+block layout-content
+  div.View.ListView
+    div.Message
+      div.Title
+        h1 Search for a food
+      div.Details
+        form(method='GET')
+          label(for='s') Keyword: 
+          input(type='text' name='s' placeholder='search in the name field' size=60 value=s)
+          input(type='submit' value='Search')
+        include mixins/food_list
+        +food_list
+                

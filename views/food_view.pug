@@ -1,0 +1,16 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    div.Message
+      div.Title
+        h1 #{food.name}
+        if message && message.length > 0
+          h3 #{message}
+        a(href='/food/update/' + food.id)
+          i(class='fas fa-edit')
+        a(href='/food/delete/' + food.id onclick='return confirm("Delete this item?");')
+          i(class='fas fa-trash')
+      div.Details
+        include mixins/food_view
+        +food_view

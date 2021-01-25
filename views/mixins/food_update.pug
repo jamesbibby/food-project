@@ -1,0 +1,34 @@
+mixin food_update
+  form(method="POST")
+    if type == 'update'
+      label(for='id') ID: 
+      input(type='text' name='id' disabled='true' value=food.id)
+      
+      label(for='name') Name: 
+      input(type='text' name='name' value=food.name)
+      
+      label(for='serving_size') Serving Size: 
+      input(type='text' name='serving_size' value=food.servingSize)
+      
+      label(for='serving_size_units') Serving Size Units: 
+      input(type='text' name='serving_size_units' value=food.servingSizeUnits)
+
+      label(for='calories') Calories: 
+      input(type='text' name='calories' value=food.calories)
+
+      label(for='carbs') Carbs: 
+      input(type='text' name='carbs' value=food.carbs)
+
+      label(for='fat') Fat: 
+      input(type='text' name='fat' value=food.fat)
+
+      label(for='protein') Protein: 
+      input(type='text' name='protein' value=food.protein)
+
+      label(for='sugar') Sugar: 
+      input(type='text' name='sugar' value=food.sugar)
+
+      label(for='salt') Salt: 
+      input(type='text' name='salt' value=food.salt)
+
+      input(type='submit' value="Save")

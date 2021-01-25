@@ -1,0 +1,13 @@
+mixin food_view
+  if err
+    span An error occurred #{err.name} ${err.message}
+  else 
+    span ID: #{food.id}
+    span Name: #{food.name}
+    span Serving Size: #{food.servingSize+" "+food.servingSizeUnits}
+    span Calories: #{food.calories}
+    span Carbs: #{food.carbs}
+    span Fat: #{food.fat}
+    span Protein: #{food.protein}
+    span Sugar: #{food.sugar}
+    span Salt: #{food.salt}

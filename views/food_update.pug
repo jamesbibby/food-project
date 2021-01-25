@@ -1,0 +1,10 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    div.Message
+      div.Title
+        h1 Update #{food.name}
+      div.Details
+        include mixins/food_update
+        +food_update

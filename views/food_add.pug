@@ -1,0 +1,10 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    div.Message
+      div.Title
+        h1 Create a new food
+      div.Details
+        include mixins/food_create
+        +food_create

@@ -1,0 +1,31 @@
+mixin food_create
+  form(method="POST")
+    
+    label(for='name') Name: 
+    input(type='text' name='name')
+    
+    label(for='serving_size') Serving Size: 
+    input(type='text' name='serving_size')
+    
+    label(for='serving_size_units') Serving Size Units: 
+    input(type='text' name='serving_size_units')
+
+    label(for='calories') Calories: 
+    input(type='text' name='calories' placeholder='in kilocalories')
+
+    label(for='carbs') Carbs: 
+    input(type='text' name='carbs' placeholder='in grams')
+
+    label(for='fat') Fat: 
+    input(type='text' name='fat' placeholder='in grams')
+
+    label(for='protein') Protein: 
+    input(type='text' name='protein' placeholder='in grams')
+
+    label(for='sugar') Sugar: 
+    input(type='text' name='sugar' placeholder='in grams')
+
+    label(for='salt') Salt: 
+    input(type='text' name='salt' placeholder='in grams')
+
+    input(type='submit' value="Create")

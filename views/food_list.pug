@@ -1,0 +1,11 @@
+extends layout
+
+block layout-content
+  div.View.ListView
+    div.Message
+      div.Title
+        h1 Food List
+      div.Details
+        include mixins/food_list
+        +food_list
+                

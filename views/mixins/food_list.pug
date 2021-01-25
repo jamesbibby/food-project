@@ -1,0 +1,32 @@
+mixin food_list
+  if foods && foods.length > 0
+    table
+      tr
+        th ID
+        th Name
+        th Serving Size
+        th Calories
+        th Carbs
+        th Fat
+        th Protein
+        th Sugar
+        th Salt
+        th Actions
+      for food in foods
+        tr
+          td #{food.id}
+          td #{food.name}
+          td #{food.servingSize+" "+food.servingSizeUnits}
+          td #{food.calories}
+          td #{food.carbs}
+          td #{food.fat}
+          td #{food.protein}
+          td #{food.sugar}
+          td #{food.salt}
+          td
+            a(href='/food/update/' + food.id)
+              i(class='fas fa-edit')
+            a(href='/food/delete/' + food.id onclick='return confirm("Delete this item?");')
+              i(class='fas fa-trash')
+  else if s && s.length > 0
+    span No Results found for #{s}
